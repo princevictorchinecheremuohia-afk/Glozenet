@@ -8,10 +8,10 @@ export const projects = [
     image: "",
 
     tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    live: "#",
-    demo: "#",
+    live: "https://glozenet-1baj.vercel.app/",
+    demo: "https://github.com/princevictorchinecheremuohia-afk/Glozenet",
     featured: true,
-    status: "In Progress",
+    status: "live",
   },
 
   {
