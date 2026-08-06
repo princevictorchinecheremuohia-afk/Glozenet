@@ -10,9 +10,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-transparent transition-colors dark:bg-slate-950 pt-20 pb-24"
+      className="bg-transparent pt-16 pb-16 transition-colors dark:bg-slate-950 md:pt-20 md:pb-24"
     >
-      <div className="mx-auto max-w-7xl py-15 px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-5 py-12 md:py-15 sm:px-6 lg:px-8 lg:py-20">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function About() {
             About Me
           </p>
 
-          <h2 className="mt-4 text-3xl md:text-4xl font-bold dark:text-white">
+          <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl leading-tight font-bold dark:text-white">
             Passionate About Building Modern Web Experiences
           </h2>
 
@@ -34,8 +34,8 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="mt-20 grid items-center gap-16 lg:grid-cols-2">
-          <div className="relative z-10 flex flex-col gap-8 self-start">
+        <div className="mt-12 grid gap-12 lg:mt-20 lg:grid-cols-2 lg:gap-16">
+          <div className="relative z-10 flex flex-col gap-8 self-start overflow-hidden">
             <div className="absolute h-80 w-80 rounded-full bg-blue-500/15 blur-3xl"></div>
             <motion.div
               animate={{ y: [0, -10, 0], x: [0, 8, 0] }}
@@ -45,12 +45,12 @@ export default function About() {
             <motion.div
               animate={{ y: [0, -12, 0], x: [0, -6, 0] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute hidden md:block top-16 -right-10 h-16 w-16 rounded-full bg-cyan-400/30 blur-lg"
+              className="absolute hidden lg:block top-16 -right-10 h-16 w-16 rounded-full bg-cyan-400/30 blur-lg"
             ></motion.div>
             <motion.div
               animate={{ y: [0, -15, 0], x: [0, 8, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute hidden md:block -bottom-8 left-10 h-40 w-20 rounded-full bg-indigo-400/30 blur-xl"
+              className="absolute hidden lg:block -bottom-8 left-10 h-40 w-20 rounded-full bg-indigo-400/30 blur-xl"
             ></motion.div>
             <motion.div
               animate={{ y: [0, -15, 0], x: [0, 8, 0] }}
@@ -58,7 +58,7 @@ export default function About() {
               className="absolute hidden md:block -bottom-12 -right-6 h-28 w-28 rounded-full bg-sky-400/30 blur-2xl"
             ></motion.div>
 
-            <div className="relative z-10">
+            <div className="relative z-10 overflow-hidden rounded-3xl">
               <CodeEditor />
             </div>
 
@@ -79,7 +79,7 @@ export default function About() {
                 My Story
               </span>
 
-              <p className="mt-5 max-w-prose leading-8 text-slate-600 dark:text-slate-300">
+              <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg dark:text-slate-300">
                 I'm <span className="font-semibold">Prince Victor</span>, a
                 passionate web developer who enjoys transforming ideas into
                 fast, responsive and modern web applications. I believe
@@ -87,7 +87,7 @@ export default function About() {
                 meaningful experience for users.
               </p>
 
-              <p className="mt-5 max-w-prose leading-8 text-slate-600 dark:text-slate-300">
+              <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg dark:text-slate-300">
                 My journey as a developer has been driven by curiosity,
                 continuous learning and the desire to build solutions that
                 businesses and individuals can rely on. Every project I work on
@@ -100,7 +100,7 @@ export default function About() {
                   What I Do
                 </h3>
 
-                <div className="grid gap-4 sm:grid-cols-2 cursor-pointer">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 cursor-pointer">
                   <ServiceCard title="Responsive Websites" />
                   <ServiceCard title="Web Applications" />
                   <ServiceCard title="UI/UX Development" />
@@ -124,7 +124,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="mt-10 rounded-2xl bg-blue-600 p-8 text-white shadow-xl">
+            <div className="mt-8 rounded-2xl bg-blue-600 p-6 shadow-xl md:p-8 text-white">
               <h3 className="text-2xl font-bold">My Goal</h3>
 
               <p className="mt-4 leading-8 text-blue-100">
@@ -135,7 +135,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="mt-10 lg:hidden">
+            <div className="mt-8 lg:hidden">
               <StatisticsCard />
             </div>
           </motion.div>
