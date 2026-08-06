@@ -9,7 +9,7 @@ import { Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { siteConfig } from "@/config/site";
 
-import Container from "./Container";
+import Container from "@/components/layout/Container";
 import { NAV_LINKS } from "@/constants/navigation";
 import { Button } from "@/components/ui/button";
 

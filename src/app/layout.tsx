@@ -3,7 +3,7 @@ import { Poppins } from "next/font/google";
 import { Toaster } from "sonner";
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import BackgroundEffects from "@/components/shared/BackgroundEffects";
-import {siteConfig} from "@/config/site"
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 const poppins = Poppins({
