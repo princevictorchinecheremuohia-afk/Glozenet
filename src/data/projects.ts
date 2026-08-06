@@ -5,7 +5,7 @@ export const projects = [
     category: "Personal Website",
     description:
       "A modern website built with Next.js, Typescript, Tailwindcss and Framer Motion.",
-    image: "",
+    image: "/images/projects/glozenet.png",
 
     tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     live: "https://glozenet-1baj.vercel.app/",
