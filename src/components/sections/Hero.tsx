@@ -39,44 +39,24 @@ export default function Hero() {
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-center gap-14 px-5 py-14 sm:px-6 sm:py-16 md:py-20 lg:flex-row lg:justify-between lg:px-8 lg:py-24">
         {/* LEFT SIDE */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="max-w-2xl text-center lg:text-left"
-        >
-          <motion.p
-            variants={itemVariants}
-            className="mb-3 text-sm font-semibold uppercase tracking-wider text-blue-600 sm:text-base"
-          >
+        <div className="max-w-2xl text-center lg:text-left">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-blue-600 sm:text-base">
             Hi, I'm
-          </motion.p>
+          </p>
 
-          <motion.h1
-            variants={itemVariants}
-            className="text-4xl font-extrabold leading-tight text-slate-900 dark:text-white sm:text-5xl md:text-6xl lg:text-7xl"
-          >
+          <h1 className="text-4xl font-extrabold leading-tight text-slate-900 dark:text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Prince Victor Chinecheremu
-          </motion.h1>
+          </h1>
 
-          <motion.h2
-            variants={itemVariants}
-            className="mt-4 text-xl font-semibold text-slate-600 dark:text-slate-300 sm:text-2xl"
-          >
+          <h2 className="mt-4 text-xl font-semibold text-slate-600 dark:text-slate-300 sm:text-2xl">
             A Web Developer
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            variants={itemVariants}
-            className="mx-auto mt-6 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-400 sm:text-lg lg:mx-0 lg:leading-8"
-          >
+          <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-400 sm:text-lg lg:mx-0 lg:leading-8">
             I build fast, modern websites that help businesses grow online.
-          </motion.p>
+          </p>
 
-          <motion.div
-            variants={itemVariants}
-            className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start"
-          >
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
             <a href="#contact" className="w-full sm:w-auto">
               <Button className="w-full cursor-pointer sm:w-auto" size="lg">
                 Hire Me
@@ -92,20 +72,11 @@ export default function Hero() {
                 View Projects
               </Button>
             </a>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* RIGHT SIDE */}
-        <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            delay: 0.8,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="flex w-full flex-col items-center"
-        >
+        <div className="flex w-full flex-col items-center">
           <div className="relative flex w-full items-center justify-center">
             {/* Glow */}
             <motion.div
@@ -170,7 +141,7 @@ export default function Hero() {
               />
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
