@@ -9,7 +9,7 @@ import { Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { siteConfig } from "@/config/site";
 
-import Container from "@/components/layout/Container";
+import Container from "./Container";
 import { NAV_LINKS } from "@/constants/navigation";
 import { Button } from "@/components/ui/button";
 
@@ -26,7 +26,7 @@ export default function Navbar() {
   if (!mounted) return null;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-md transition-colors duration-300 dark:border-slate-800 dark:bg-slate-950/80">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-md transition-colors duration-300 dark:border-slate-800 dark:bg-slate-950/80">
       <Container>
         <nav className="flex h-20 items-center justify-between">
           {/* LOGO */}

@@ -31,7 +31,7 @@ export default function RootLayout({
         <ThemeProvider>
           <BackgroundEffects />
 
-          <main className="relative z-10">{children}</main>
+          <main className="relative z-10 pt-20">{children}</main>
 
           <Toaster position="top-right" richColors closeButton />
         </ThemeProvider>

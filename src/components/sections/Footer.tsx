@@ -16,8 +16,8 @@ import { siteConfig } from "@/config/site";
 export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-950 text-white">
-      <div className="mx-auto max-w-7xl py-20 px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-3">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -30,13 +30,13 @@ export default function Footer() {
               </span>
             </Link>
 
-            <p className="mt-6 leading-8 text-slate-400">
+            <p className="mt-5 max-w-md text-sm leading-7 text-slate-400 sm:text-base">
               Building modern, fast and responsive web experiences that help
               businesses, brands and individuals establish a strong online
               presence.
             </p>
 
-            <div className="mt-8 flex items-center gap-4">
+            <div className="mt-7 flex flex-wrap items-center gap-3">
               <motion.a
                 whileHover={{ y: -5, scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -78,9 +78,11 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h3 className="text-xl font-semibold text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-white sm:text-xl">
+              Quick Links
+            </h3>
 
-            <ul className="mt-6 space-y-4">
+            <ul className="mt-5 space-y-5">
               <li>
                 <a
                   href="#home"
@@ -125,36 +127,38 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-xl font-semibold text-white">Contact</h3>
+            <h3 className="text-lg font-semibold text-white sm:text-xl">
+              Contact
+            </h3>
 
-            <div className="mt-6 space-y-4">
-              <div className="flex items-center gap-5">
+            <div className="mt-5 space-y-5">
+              <div className="flex items-start gap-4">
                 <FaEnvelope />
                 <a
                   href="mailto:ohiaprincevictor2020@gmail.com"
-                  className="break-all text-slate-400 transition hover:text-blue-400"
+                  className="break-all text-sm text-slate-400 transition hover:text-blue-400 sm:text-base"
                 >
                   ohiaprincevictor2020@gmail.com
                 </a>
               </div>
 
-              <div className="flex items-center gap-5">
+              <div className="flex items-start gap-4">
                 <FaPhoneAlt />
                 <a
                   href="tel:+2349130840647"
-                  className="text-slate-400 transition hover:text-blue-400"
+                  className="text-sm text-slate-400 transition hover:text-blue-400 sm:text-base"
                 >
                   +234 913 084 0647
                 </a>
               </div>
 
-              <div className="flex items-center gap-5">
+              <div className="flex items-start gap-4">
                 <FaMapMarkerAlt />
                 <a
                   href="https://maps.google.com/?q=Port+Harcourt,Nigeria"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 transition hover:text-blue-400"
+                  className="text-sm text-slate-400 transition hover:text-blue-400 sm:text-base"
                 >
                   Port Harcourt, Nigeria
                 </a>
@@ -169,7 +173,7 @@ export default function Footer() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center "
+            className="mt-8 flex flex-col items-center justify-between gap-6 text-center lg:flex-row lg:text-left"
           >
             <p className="text-sm text-slate-400">
               © 2026 Glopenet. All rights reserved.
@@ -180,24 +184,13 @@ export default function Footer() {
               <span className="font-semibold text-white">Prince Victor</span>
             </p>
 
-            <p className="text-sm text-slate-400">
+            <p className="text-xs text-slate-400 sm:text-sm">
               Built with <span className="font-medium text-white">Next.js</span>
               {" • "}
               <span className="font-medium text-white">TypeScript</span>
               {" • "}
               <span className="font-medium text-white">Tailwind CSS</span>
             </p>
-
-            <div className="mt-10 flex justify-center">
-              <motion.a
-                href="#home"
-                whileHover={{ scale: 1.1, y: -4 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition hover:bg-blue-700"
-              >
-                <FaArrowUp className="text-lg" />
-              </motion.a>
-            </div>
           </motion.div>
         </div>
       </div>

@@ -73,9 +73,9 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-transparent transition-colors dark:bg-slate-950 pt-20 pb-24"
+      className="bg-transparent pt-16 pb-16 transition-colors sm:pt-20 sm:pb-20 lg:pt-24 lg:pb-24 dark:bg-slate-950"
     >
-      <div className="mx-auto max-w-7xl py-15 px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,33 +87,33 @@ export default function Contact() {
             Contact
           </p>
 
-          <h2 className="mt-4 text-3xl md:text-4xl font-bold">
+          <h2 className="mt-4 text-2xl font-bold leading-tight sm:text-3xl md:text-4xl dark:text-white">
             Let's Build Something Together
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-slate-600 text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg dark:text-slate-300">
             Have a project in mind or need a modern website? I'd love to hear
             from you. Let's build something amazing together.
           </p>
 
-          <div className="mt-20 grid gap-8 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 lg:mt-16 lg:grid-cols-2 lg:gap-8">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-colors dark:border-slate-700 dark:bg-slate-900"
+              className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-colors sm:p-6 lg:p-8 dark:border-slate-700 dark:bg-slate-900"
             >
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+              <h3 className="text-xl font-bold sm:text-2xl text-slate-900 dark:text-white">
                 Get In Touch
               </h3>
 
-              <p className="mt-5 leading-8 text-slate-600 dark:text-slate-300">
+              <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base dark:text-slate-300">
                 Whether you have a project idea, need a modern website, or
                 simply want to say hello, I'd love to hear from you.
               </p>
 
-              <div className="mt-10 space-y-5">
+              <div className="mt-8 space-y-4">
                 <ContactCard
                   icon={FaEnvelope}
                   title="email"
@@ -145,19 +145,19 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-colors dark:border-slate-700 dark:bg-slate-900"
+              className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-colors sm:p-6 lg:p-8 dark:border-slate-700 dark:bg-slate-900"
             >
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+              <h3 className="text-xl font-bold sm:text-2xl text-slate-900 dark:text-white">
                 Send Me a Message
               </h3>
 
-              <p className="mt-5 leading-8 text-slate-600 dark:text-slate-300">
+              <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base dark:text-slate-300">
                 Fill out the form below and I'll get back to you as soon as
                 possible.
               </p>
 
-              <form onSubmit={handleSubmit} className="mt-10 space-y-6">
-                <div className="grid gap-6 sm:grid-cols-2">
+              <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+                <div className="grid gap-5 md:grid-cols-2">
                   <div>
                     <label className="mb-2 block font-semibold text-sm text-slate-700 dark:text-slate-300">
                       Full Name
@@ -170,7 +170,7 @@ export default function Contact() {
                       value={formData.from_name}
                       onChange={handleChange}
                       required
-                      className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500"
+                      className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500"
                     />
                   </div>
 
@@ -186,7 +186,7 @@ export default function Contact() {
                       value={formData.from_email}
                       onChange={handleChange}
                       required
-                      className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500"
+                      className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500"
                     />
                   </div>
                 </div>
@@ -203,7 +203,7 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500"
+                    className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500"
                   />
                 </div>
 
@@ -219,7 +219,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500"
+                    className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500"
                   ></textarea>
                 </div>
 
@@ -228,7 +228,7 @@ export default function Contact() {
                   whileTap={{ scale: 0.97 }}
                   type="submit"
                   disabled={loading}
-                  className="flex items-center justify-center gap-2 w-full rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white shadow-lg transition hover:bg-blue-700 cursor-pointer"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:bg-blue-700 sm:text-base cursor-pointer"
                 >
                   <FaPaperPlane />
                   {loading ? "Sending" : "Send Message"}

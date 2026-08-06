@@ -35,10 +35,10 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[calc(100vh-80px)] overflow-hidden dark:bg-slate-950 transition-colors duration-300"
+      className="overflow-hidden transition-colors duration-300 dark:bg-slate-950"
     >
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-12 px-6 py-20 pt-20 pb-12 lg:flex-row lg:justify-between lg:px-8">
-        {/* LEFT SIDE OF THE FLEX */}
+      <div className="mx-auto flex w-full max-w-7xl flex-col-reverse items-center gap-14 px-5 py-14 sm:px-6 sm:py-16 md:py-20 lg:flex-row lg:justify-between lg:px-8 lg:py-24">
+        {/* LEFT SIDE */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -47,51 +47,55 @@ export default function Hero() {
         >
           <motion.p
             variants={itemVariants}
-            className="mb-4 text-blue-600 font-semibold"
+            className="mb-3 text-sm font-semibold uppercase tracking-wider text-blue-600 sm:text-base"
           >
             Hi, I'm
           </motion.p>
 
           <motion.h1
             variants={itemVariants}
-            className="text-5xl font-extrabold leading-tight lg:text-7xl dark:text-white"
+            className="text-4xl font-extrabold leading-tight text-slate-900 dark:text-white sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Prince Victor Chinecheremu
           </motion.h1>
 
           <motion.h2
             variants={itemVariants}
-            className="mt-4 text-2xl font-semibold text-slate-600 dark:text-slate-300"
+            className="mt-4 text-xl font-semibold text-slate-600 dark:text-slate-300 sm:text-2xl"
           >
             A Web Developer
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            className="mt-8 leading-8 text-lg text-slate-600 dark:text-slate-400"
+            className="mx-auto mt-6 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-400 sm:text-lg lg:mx-0 lg:leading-8"
           >
-            I build fast, modern website that helps business grow online.
+            I build fast, modern websites that help businesses grow online.
           </motion.p>
 
           <motion.div
             variants={itemVariants}
-            className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start"
+            className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start"
           >
-            <a href="#contact">
-              <Button className="cursor-pointer" size="lg">
+            <a href="#contact" className="w-full sm:w-auto">
+              <Button className="w-full cursor-pointer sm:w-auto" size="lg">
                 Hire Me
               </Button>
             </a>
 
-            <a href="#project">
-              <Button className="cursor-pointer" variant="outline" size="lg">
+            <a href="#project" className="w-full sm:w-auto">
+              <Button
+                className="w-full cursor-pointer sm:w-auto"
+                variant="outline"
+                size="lg"
+              >
                 View Projects
               </Button>
             </a>
           </motion.div>
         </motion.div>
 
-        {/* RIGHT SIDE OF THE FLEX */}
+        {/* RIGHT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: 80 }}
           animate={{ opacity: 1, x: 0 }}
@@ -100,22 +104,24 @@ export default function Hero() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="min-w-0 flex flex-col items-center"
+          className="flex w-full flex-col items-center"
         >
-          <div className="relative h-auto w-full lg:h-[500px] lg:w-[500px] flex items-center justify-center">
-            {/* GLOW EFFECT FOR THE IMAGE */}
+          <div className="relative flex w-full items-center justify-center">
+            {/* Glow */}
             <motion.div
-              animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0.7, 0.5] }}
+              animate={{
+                scale: [1, 1.5, 1],
+                opacity: [0.5, 0.7, 0.5],
+              }}
               transition={{
                 duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute hidden lg:block h-96 w-96 rounded-full bg-blue-500/30 dark:bg-blue-500/40 blur-3xl"
-            ></motion.div>
+              className="absolute hidden h-96 w-96 rounded-full bg-blue-500/30 blur-3xl dark:bg-blue-500/40 lg:block"
+            />
 
-            {/* FLOATING ICONS AROUND HERO-IMAGE */}
-            {/* DESKTOP VIEW */}
+            {/* Desktop floating badges */}
             <div className="hidden lg:block">
               {techStack.map((tech) => (
                 <TechBadge
@@ -128,30 +134,33 @@ export default function Hero() {
               ))}
             </div>
 
-            <div className="hidden lg:block">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  delay: 0.3,
-                  duration: 0.8,
-                }}
-                whileHover={{ scale: 1.05 }}
-                className="relative z-10 h-56 w-56 sm:h-72 sm:w-72 lg:h-80 lg:w-80 overflow-hidden rounded-full border-4 border-blue-500 shadow-2xl"
-              >
-                <Image
-                  src="/images/hero-image.jpeg"
-                  alt="Hero Image"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </motion.div>
-            </div>
+            {/* Hero Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.3,
+                duration: 0.8,
+              }}
+              whileHover={{ scale: 1.05 }}
+              className="relative z-10 h-56 w-56 overflow-hidden rounded-full border-4 border-blue-500 shadow-2xl xs:h-60 xs:w-60 sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-96 lg:w-96"
+            >
+              <Image
+                src="/images/hero-image.jpeg"
+                alt="Hero Image"
+                fill
+                priority
+                sizes="(max-width:640px) 224px,
+                       (max-width:768px) 288px,
+                       (max-width:1024px) 320px,
+                       384px"
+                className="object-cover"
+              />
+            </motion.div>
           </div>
 
-          {/* MOBILE VIEW */}
-          <div className="flex flex-col items-center gap-3 lg:hidden">
+          {/* Mobile Tech Badges */}
+          <div className="mt-8 flex w-full flex-wrap justify-center gap-3 lg:hidden">
             {techStack.map((tech) => (
               <MobileTechBadge
                 key={tech.name}

@@ -8,9 +8,9 @@ export default function Projects() {
   return (
     <section
       id="project"
-      className="bg-transparent transition-colors dark:bg-slate-950 pt-20 pb-24"
+      className="bg-transparent pt-16 pb-16 transition-colors md:pt-20 md:pb-24 dark:bg-slate-950"
     >
-      <div className="mx-auto max-w-7xl py-15 px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8 lg:py-20">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,16 +22,16 @@ export default function Projects() {
             Featured Projects
           </p>
 
-          <h2 className="mt-4 text-3xl md:text-4xl font-bold dark:text-white">
-            Projects That Solves Real Problems
+          <h2 className="mt-4 text-2xl font-bold leading-tight sm:text-3xl md:text-4xl dark:text-white">
+            Projects That Solve Real Problems
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-slate-600 text-lg dark:text-slate-300">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg dark:text-slate-300">
             Here are some of the projects I've built using modern technologies,
             focusing on performance, usability and clean design.
           </p>
 
-          <div className="mt-20 grid gap-8 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 sm:gap-8 md:mt-16 md:grid-cols-2 lg:mt-20">
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}

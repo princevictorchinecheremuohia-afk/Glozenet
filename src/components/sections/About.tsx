@@ -12,7 +12,7 @@ export default function About() {
       id="about"
       className="bg-transparent pt-16 pb-16 transition-colors dark:bg-slate-950 md:pt-20 md:pb-24"
     >
-      <div className="mx-auto max-w-7xl px-5 py-12 md:py-15 sm:px-6 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 py-12 md:py-15 sm:px-6 lg:px-8 lg:py-20">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function About() {
             About Me
           </p>
 
-          <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl leading-tight font-bold dark:text-white">
+          <h2 className="mx-auto mt-4 max-w-2xl text-2xl sm:text-3xl md:text-4xl leading-tight font-bold dark:text-white">
             Passionate About Building Modern Web Experiences
           </h2>
 

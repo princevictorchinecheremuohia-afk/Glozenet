@@ -61,7 +61,7 @@ export default function StatisticsCard() {
         </h3>
       </div>
 
-      <div className="grid grid-cols-1 gap-3 sm:gap-4 md:gap-5 cursor-pointer">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-5 cursor-pointer">
         {statistics.map((item, index) => {
           const Icon = item.icon;
 
