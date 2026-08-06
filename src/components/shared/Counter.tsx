@@ -10,7 +10,7 @@ interface CounterProps {
 }
 
 export default function Counter({ from = 0, to, suffix = "" }: CounterProps) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLSpanElement>(null);
 
   const isInView = useInView(ref, {
     once: true,
@@ -30,11 +30,13 @@ export default function Counter({ from = 0, to, suffix = "" }: CounterProps) {
   }, [isInView, motionValue, to]);
 
   useEffect(() => {
-    springValue.on("change", (latest) => {
+    const unsubscribe = springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = Math.floor(latest).toString() + suffix;
+        ref.current.textContent = `${Math.floor(latest)}${suffix}`;
       }
     });
+
+    return unsubscribe;
   }, [springValue, suffix]);
 
   return (
