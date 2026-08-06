@@ -98,8 +98,8 @@ export default function Contact() {
 
           <div className="mt-12 grid gap-6 lg:mt-16 lg:grid-cols-2 lg:gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-colors sm:p-6 lg:p-8 dark:border-slate-700 dark:bg-slate-900"
@@ -141,8 +141,8 @@ export default function Contact() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-colors sm:p-6 lg:p-8 dark:border-slate-700 dark:bg-slate-900"

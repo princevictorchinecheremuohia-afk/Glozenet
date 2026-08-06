@@ -38,8 +38,10 @@ export default function About() {
           <div className="relative z-10 flex flex-col gap-8 self-start overflow-hidden">
             <div className="absolute h-80 w-80 rounded-full bg-blue-500/15 blur-3xl"></div>
             <motion.div
-              animate={{ y: [0, -10, 0], x: [0, 8, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
               className="absolute hidden md:block -top-10 -left-8 h-24 w-24 rounded-full bg-blue-400/30 blur-xl"
             ></motion.div>
             <motion.div
@@ -68,8 +70,8 @@ export default function About() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="space-y-10"

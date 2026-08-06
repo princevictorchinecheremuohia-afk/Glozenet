@@ -79,18 +79,7 @@ export default function Hero() {
         <div className="flex w-full flex-col items-center">
           <div className="relative flex w-full items-center justify-center">
             {/* Glow */}
-            <motion.div
-              animate={{
-                scale: [1, 1.5, 1],
-                opacity: [0.5, 0.7, 0.5],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute hidden h-96 w-96 rounded-full bg-blue-500/30 blur-3xl dark:bg-blue-500/40 lg:block"
-            />
+            <div className="absolute hidden h-96 w-96 rounded-full bg-blue-500/30 blur-3xl dark:bg-blue-500/40 lg:block" />
 
             {/* Desktop floating badges */}
             <div className="hidden lg:block">
@@ -106,16 +95,7 @@ export default function Hero() {
             </div>
 
             {/* Hero Image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-              }}
-              whileHover={{ scale: 1.05 }}
-              className="relative z-10 h-56 w-56 overflow-hidden rounded-full border-4 border-blue-500 shadow-2xl xs:h-60 xs:w-60 sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-96 lg:w-96"
-            >
+            <div className="relative z-10 h-56 w-56 overflow-hidden rounded-full border-4 border-blue-500 shadow-2xl xs:h-60 xs:w-60 sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-96 lg:w-96">
               <Image
                 src="/images/hero-image.jpeg"
                 alt="Hero Image"
@@ -127,7 +107,7 @@ export default function Hero() {
                        384px"
                 className="object-cover"
               />
-            </motion.div>
+            </div>
           </div>
 
           {/* Mobile Tech Badges */}
