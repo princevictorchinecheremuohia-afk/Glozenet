@@ -27,7 +27,7 @@ export default function ContactCard({
           {title}
         </p>
 
-        <p className="mt-1 break-words font-semibold text-slate-900 dark:text-white">
+        <p className="mt-1 max-w-2xl font-semibold text-slate-900 dark:text-white">
           {value}
         </p>
       </div>
